@@ -12,5 +12,15 @@ Beacuse it is a table, it is optimzed for the following generic operations: Quer
 
 Note that it is now in the cloud computing age, you really should move your apps into the cloud space. So you don't really need to install and maintain a database on a server by yourself. Find a managed database that can be scaled well. In this way, you can also easily to write apps with serverless concept. 
 
+DocumentDB/NoSQL
+
+Now I want to move to the next popular database, called DocumentDB. When people talks about NoSQL, it is most likely DocumentDB. 
+
+Basically, DocumentDB tries to solve one issue in RDBMS: you want flexible columns in a row. Thinking of a user profile, which might have lots of attributes. But for a particular user, it may only have a few of them. In this case, if you use RDBMS columns to store each of the attributes, you are wasting a lof ot storage room for the empty fields. Remember that RDBMS is normally stored row by row in a file, and the space of each row is not sizeable, because otherwise you have to re-write the remaining file to update a row. So the RDBMS columns are fixed length, and you have to reserve the space of all columns even if it is empty.
+
+So in DocumentDB, each row is stored in a file, which allows a flexible row size. You don't have to reserve space for a column that is not used.
+
+However, when you want to update a column in a row file, you have to read the whole file, update it, and write the whole file back. So the file itself cannot be very large. Compare this with the RDBMS, RDBMS can find the column location in a row on the disk, and update only that part of the file, without reading/writing the whole file.
+
 
 
