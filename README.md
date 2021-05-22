@@ -34,7 +34,7 @@ ColumnDB is exactly designed for this purpose. You can have a lot of columns. Bu
 
 Key-value store
 
-When you want super fast query, you may thinking of key-store store in memory. It is a hash table in memory, which gives you the value of a given key. It is designed for speed.
+When you want super fast query, you may thinking of key-value store in memory. It is a hash table in memory, which gives you the value of a given key. It is designed for speed.
 
 
 
