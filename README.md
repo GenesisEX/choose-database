@@ -32,6 +32,10 @@ But consider if you have a table that stores stock price data. The data has colu
 
 ColumnDB is exactly designed for this purpose. You can have a lot of columns. But your most query only need to return one or a few columns on many rows for a particular tag ( stock symbol in the above example). ColumnDB makes this super fast as you are continously read from disk, instead of reading rows randomly on a disk like RDBMS.
 
+Key-value store
+
+When you want super fast query, you may thinking of key-store store in memory. It is a hash table in memory, which gives you the value of a given key. It is designed for speed.
+
 
 
 
