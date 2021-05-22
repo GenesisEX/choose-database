@@ -28,6 +28,11 @@ Now we move on to the next type of database: ColumnDB.
 
 In most of the applications, you will generally query a row. For example, find a particluar user from a user table, so it makes sense that data is stored row by row.
 
+But consider if you have a table that stores stock price data. The data has columns on date, symbol, open, close, high, low, volume. Your most used query is to return historical close price for a particular symbol. In such cases, it makes more sense that data is stored by column in a data file.
+
+ColumnDB is exactly designed for this purpose. You can have a lot of columns. But your most query only need to return one or a few columns on many rows for a particular tag ( stock symbol in the above example). 
+
+
 
 
 
