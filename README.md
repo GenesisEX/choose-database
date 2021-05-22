@@ -18,9 +18,16 @@ Now I want to move to the next popular database, called DocumentDB. When people 
 
 Basically, DocumentDB tries to solve one issue in RDBMS: you want flexible columns in a row. Thinking of a user profile, which might have lots of attributes. But for a particular user, it may only have a few of them. In this case, if you use RDBMS columns to store each of the attributes, you are wasting a lof ot storage room for the empty fields. Remember that RDBMS is normally stored row by row in a file, and the space of each row is not sizeable, because otherwise you have to re-write the remaining file to update a row. So the RDBMS columns are fixed length, and you have to reserve the space of all columns even if it is empty.
 
-So in DocumentDB, each row is stored in a file, which allows a flexible row size. You don't have to reserve space for a column that is not used.
+In DocumentDB, each row is stored in a file, which allows a flexible row size. You don't have to reserve space for a column that is not used.
 
 However, when you want to update a column in a row file, you have to read the whole file, update it, and write the whole file back. So the file itself cannot be very large. Compare this with the RDBMS, RDBMS can find the column location in a row on the disk, and update only that part of the file, without reading/writing the whole file.
+
+ColumnDB
+
+Now we move on to the next type of database: ColumnDB. 
+
+In most of the applications, you will generally query a row. For example, find a particluar user from a user table, so it makes sense that data is stored row by row.
+
 
 
 
